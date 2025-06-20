@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li")
       li.innerHTML = `<span>${expense.name} - ₹${expense.amount}</span>
       <button data-id=${expense.id}>
-      <img src="../Image Folder/icons8-delete-48.png" alt="">
+      <img src="./icons8-delete-48.png" alt="">
       Delete
       </button>`
       expenseList.appendChild(li)
