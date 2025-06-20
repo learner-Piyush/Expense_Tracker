@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = expenseNameInput.value.trim()
     const amount = parseFloat(expenseAmountInput.value.trim())
 
-    if (name !== "" && !isNaN(amount) && amount > 0) {
+    if (name !== "" && !isNaN(amount)) {
+      if (amount <= 0) {
+        alert("Are you really an idiot?");
+        return;
+      }
+      
       const newExpense = {
         id: Date.now(),
         name,
